@@ -53,6 +53,13 @@ window.onload = function(){
 					  	img : 'img/t1png.png',
 					  	name : '果果'
 					  },
+{
+					  	id :6,
+					  	type : false,
+					  	qqnumber : 1035336919,
+					  	img : 'img/t1png.png',
+					  	name : '果果'
+					  },
 					],
 					hellos : [
 					  
