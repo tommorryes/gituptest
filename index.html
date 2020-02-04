@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>好友列表</title>
+		<link rel="stylesheet" href="css/bootstrap-grid.css" />
+		<link rel="stylesheet" href="css/bootstrap-grid.min.css" />
+		<link rel="stylesheet" href="css/bootstrap-reboot.css" />
+		<link rel="stylesheet" href="css/bootstrap-reboot.min.css" />
+		<link rel="stylesheet" href="css/bootstrap.css" />
+		<link rel="stylesheet" href="css/bootstrap.min.css" />
+		<link rel="stylesheet" href="css/index.css" />
+		<script type="text/javascript" src="js/vue.js" ></script>
+		<script type="text/javascript" src="js/jquery-3.4.1.min.js" ></script>
+		
+	    <script type="text/javascript" src="js/index.js" ></script>
+	</head>
+	<body>
+		<div class="box"  id='demo'>
+			<div class="left">
+				<div class="top">
+					所有好友({{hello.length}})/当前选中({{lists.length}})
+				</div>
+				<div class="center">
+					<div class="msg" v-for="(i,index) in hello" :key="index" @click="add(i)"   @mouseenter="addcolor(index)">
+					
+						<img :src="i.img" class="  img"/>
+						<span :class="ins==index ? activity : username">{{i.name}}</span>
+						<span :class="ins==index ? activity : username">({{i.qqnumber}})</span>
+					</div>
+				</div>
+			</div>
+			<div class="right">
+				<div class="top">
+					已选择联系人({{hellos.length}})
+				</div>
+				<div class="center">
+					<div class="msg" v-for="(i,index) in hellos" :key="index" @mouseenter="de(index)" @mouseleave="dl(index)">
+					
+						<img :src="i.img" class="img"/>
+						<span class="username">{{i.name}}</span>
+						
+						<span class="username">({{i.qqnumber}})</span>
+						<span @click="delcolor(index)" :class="del==index ? '' : none ">x</span>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+	</body>
+</html>
