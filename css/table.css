@@ -1,0 +1,10 @@
+*{
+	margin:  0px;
+	padding: 0px;
+}
+
+div{
+	height: auto;
+	width: auto;
+	border-left-color: #000000;
+}
