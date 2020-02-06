@@ -1,9 +1,10 @@
-window.onload = function(){
+﻿window.onload = function(){
+
     var vm = new Vue({
         el:"#demo",
         data:{
         	username : 'username',
-        	none : 'none',
+        	none : 'nones',
         	del :-1,
         	ins :-1,//
         	msg : 'msg',
